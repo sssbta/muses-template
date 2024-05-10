@@ -73,6 +73,7 @@ figure#logo {
   margin: 0;
 }
 
+/*上部メニュー　3つ色設定*/
 #upper_menu div:nth-child(1) {
   background-color: #ef8683;
 }
@@ -157,6 +158,7 @@ main#top div {
   padding: 0.5rem;
 }
 
+/*メインメニュー　図形色設定*/
 main#top div:nth-child(1) {
   background-color: #f4bab8;
 }

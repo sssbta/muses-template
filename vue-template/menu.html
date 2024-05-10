@@ -1,3 +1,4 @@
+<!--柴田-->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -36,7 +37,9 @@
       </div>
       <div id="news">
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
-        <div id="news_num"><img src="img/board.png" />未読掲示が {{unread}} 件 あります！</div>
+        <div id="news_num">
+          <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
+        </div>
       </div>
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
@@ -51,7 +54,9 @@
         <div id="caution">
           ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
         </div>
-        <div id="unread_num"><span class="exmark">!</span>：未読({{unread}}件)</div>
+        <div id="unread_num">
+          <span class="exmark">!</span>：未読({{unread}}件)
+        </div>
         <div id="info_list" v-if="data">
           <div class="record" v-for="item of data">
             <div class="date">{{item.date}}</div>

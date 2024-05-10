@@ -3,8 +3,8 @@
 "use strict";
 
 PetiteVue.createApp({
-  username: "",
-  unread: "",
+  username: "" /*ユーザーネーム*/,
+  unread: "" /*未読判定*/,
 
   async init() {
     const username = sessionStorage.username;

@@ -25,7 +25,7 @@ PetiteVue.createApp({
     /*data.jsonのデータを読み込む処理*/
     const res = await fetch("data.json");
     const obj = await res.json();
-    this.data = obj.list;
+    this.data = obj.list; /*変数dataにリストを入れる*/
     console.log(this.data);
     /*await を使うのは読み込み処理を同期（完了するまで次の処理が始まらない）にするため*/
     this.unread = this.data.length; /*未読メールの数をunreadという変数に入れる*/

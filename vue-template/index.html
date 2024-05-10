@@ -12,8 +12,12 @@
         display: none;
       }
     </style>
+    <!--petite-vue読み込み前にページを表示することへの対策-->
   </head>
+
   <body @vue:mounted="init" v-cloak>
+    <!--petite-vue読み込み前にページを表示することへの対策-->
+
     <header>
       <figure id="logo">
         <!--musesロゴ画像の挿入-->

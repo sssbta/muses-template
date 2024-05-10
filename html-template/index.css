@@ -73,6 +73,7 @@ figure#logo {
   margin: 0;
 }
 
+/*上部メニュー　3つ色設定*/
 #upper_menu div:nth-child(1) {
   background-color: #ef8683;
 }
@@ -85,6 +86,7 @@ figure#logo {
   background-color: #ef86bd;
 }
 
+/*ニュース欄　設定*/
 #news {
   background-color: #f0f0f0;
   padding: 0.5rem;
@@ -110,6 +112,7 @@ figure#logo {
   color: blue;
 }
 
+/*リンク　デザイン*/
 #link {
   display: flex;
   gap: 1.5rem;
@@ -157,6 +160,7 @@ main#top div {
   padding: 0.5rem;
 }
 
+/*メインメニュー　図形色設定*/
 main#top div:nth-child(1) {
   background-color: #f4bab8;
 }

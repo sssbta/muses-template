@@ -16,10 +16,15 @@
   <body @vue:mounted="init" v-cloak>
     <header>
       <figure id="logo">
+        <!--musesロゴ画像の挿入-->
         <img src="img/logo.png" />
       </figure>
+
       <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
+      <!--名前部分-->
+
       <div id="upper_menu">
+        <!--上部メニュー　上のPC版・残り時間・ログアウトボタン-->
         <div>
           <img src="img/pc_site.png" /><br />
           PC版
@@ -35,19 +40,25 @@
           </a>
         </div>
       </div>
+
       <div id="news">
+        <!--新着情報-->
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
         <div id="news_num">
+          <!--未読件数表示-->
           <img src="img/board.png" />未読掲示が {{unread}}件 あります！
         </div>
       </div>
+
       <div id="link">
+        <!--ホームボタン-->
         <div>HOME &gt;</div>
       </div>
       <p>登録されていません</p>
     </header>
 
     <main id="top">
+      <!--メニュー各種ボタン-->
       <div>
         <a href="menu.html"><img src="img/info_muses.png" /><br />info@MUSES</a>
       </div>
@@ -61,13 +72,17 @@
 
     <footer>
       <div id="link">
+        <!--ホームボタン-->
         <div>HOME &gt;</div>
       </div>
+
       <p>Information</p>
       <div id="information"></div>
     </footer>
 
     <script src="https://unpkg.com/petite-vue"></script>
+    <!--petite-vueオブジェクトの読み込み-->
     <script src="index.js"></script>
+    <!--petite-vueファイルの読み込み-->
   </body>
 </html>

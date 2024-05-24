@@ -13,3 +13,8 @@
   対象：大学主催のキャリアイベント、セミナー、インターンシップ
   人気のイベントを学部ごとにランキング形式で見ることができる
   （プライバシーの問題が若干あるかも）
+
+  画面処理仕様：https://docs.google.com/spreadsheets/d/1fNFwnTNebIcF7jL4sFhYtTjcBmT4v8PX/edit?usp=sharing&ouid=105984057116669296879&rtpof=true&sd=true
+
+  JSON：https://docs.google.com/spreadsheets/d/1uuNJcCe2fVTDW9yaTrxQ2WDYegX5W6yu/edit?usp=sharing&ouid=105984057116669296879&rtpof=true&sd=true
+  

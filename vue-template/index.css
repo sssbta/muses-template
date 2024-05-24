@@ -1,6 +1,8 @@
+/*shimizu*/
 :root {
   font-size: 16px;
   --bg-color: #555555;
+  /*背景色*/
 }
 
 body {
@@ -11,6 +13,7 @@ body {
   margin: 0;
   padding: 0.5rem;
 }
+/*body デザイン設定*/
 
 header {
   margin-bottom: 2rem;
@@ -19,11 +22,13 @@ header {
 figure#logo {
   margin: 1rem 0;
 }
+/*図形成形*/
 
 #logo img {
   width: 16rem;
   height: 3rem;
 }
+/*img 大きさ調節*/
 
 #user_name {
   display: flex;
@@ -35,6 +40,7 @@ figure#logo {
   padding-right: 1rem;
   height: 1.7rem;
 }
+/*ユーザー名デザイン*/
 
 #user_name img {
   height: 1.5rem;
@@ -42,6 +48,7 @@ figure#logo {
   background-color: var(--bg-color);
 }
 
+/* 上部メニュー */
 #upper_menu {
   display: flex;
   font-size: 0.75rem;
@@ -55,15 +62,18 @@ figure#logo {
   width: 4.5rem;
   text-align: center;
 }
+/*上部メニュー位置調節*/
 
 #upper_menu img {
   width: 2rem;
 }
+/*上部メニュー img 調節*/
 
 #upper_menu p {
   margin: 0;
 }
 
+/*上部メニュー　3つ色設定*/
 #upper_menu div:nth-child(1) {
   background-color: #ef8683;
 }
@@ -76,6 +86,7 @@ figure#logo {
   background-color: #ef86bd;
 }
 
+/*ニュース欄　設定*/
 #news {
   background-color: #f0f0f0;
   padding: 0.5rem;
@@ -101,6 +112,7 @@ figure#logo {
   color: blue;
 }
 
+/*リンク　デザイン*/
 #link {
   display: flex;
   gap: 1.5rem;
@@ -148,6 +160,7 @@ main#top div {
   padding: 0.5rem;
 }
 
+/*メインメニュー　図形色設定*/
 main#top div:nth-child(1) {
   background-color: #f4bab8;
 }

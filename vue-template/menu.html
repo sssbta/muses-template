@@ -14,11 +14,14 @@
     </style>
   </head>
   <body @vue:mounted="init" v-cloak>
+    <!--initをロード（v-cloakはロード時の画面のチラつき防止）-->
+    <!--ここからヘッダ-->
     <header>
       <figure id="logo">
         <img src="img/logo.png" />
       </figure>
       <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
+      <!--PC版へのリンク、残り時間、ログアウトのボタン-->
       <div id="upper_menu">
         <div>
           <img src="img/pc_site.png" /><br />
@@ -35,19 +38,23 @@
           </a>
         </div>
       </div>
+      <!--ここから新着情報-->
       <div id="news">
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
         <div id="news_num">
           <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
         </div>
       </div>
+      <!--ここからパンくずリスト-->
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
         <div>info@MUSES &gt;</div>
       </div>
       <p>登録されていません</p>
     </header>
+    <!--ヘッダ終わり-->
 
+    <!--ここから本文-->
     <main id="info">
       <div id="info_header"><img src="img/loupe.gif" /> info@MUSES参照</div>
       <div id="info_link">
@@ -57,15 +64,21 @@
         <div id="unread_num">
           <span class="exmark">!</span>：未読({{unread}}件)
         </div>
+
         <div id="info_list" v-if="data">
+          <!--メールリストの変数dataに値が入っていたら-->
+          <!--データの中身を出力するforループ-->
           <div class="record" v-for="item of data">
             <div class="date">{{item.date}}</div>
             <div class="from" v-html="item.from"></div>
             <div class="imp">{{item.imp}}</div>
             <div class="tri">&nbsp;</div>
+            <!--▶-->
             <div class="mark"><span class="exmark">!</span></div>
+            <!--「！」-->
             <div class="subject">{{item.subject}}</div>
           </div>
+          <!--forループ終わり-->
         </div>
       </div>
       <div id="control">
@@ -74,7 +87,9 @@
       </div>
       <div id="info_footer"><img src="img/loupe.gif" /> info@MUSES参照</div>
     </main>
+    <!--本文終わり-->
 
+    <!--ここからフッタ-->
     <footer>
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
@@ -82,7 +97,9 @@
       <p>Information</p>
       <div id="information"></div>
     </footer>
+    <!--フッタ終わり-->
 
+    <!--petite vueとmenu.jsの読み込み-->
     <script src="https://unpkg.com/petite-vue"></script>
     <script src="menu.js"></script>
   </body>

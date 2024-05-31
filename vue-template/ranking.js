@@ -1,5 +1,3 @@
-/*金澤雅*/
-
 "use strict";
 
 PetiteVue.createApp({

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>キャリア支援</title>
     <link href="index.css" rel="stylesheet" />
-    <link href="career.css" rel="stylesheet" />
+    <link href="ranking.css" rel="stylesheet" />
     <style>
       [v-cloak] {
         display: none;
@@ -37,32 +37,17 @@
           </a>
         </div>
       </div>
-      <!--ここから新着情報-->
-      <div id="news">
-        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
-        <div id="news_num">
-          <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
-        </div>
-      </div>
       <!--ここからパンくずリスト-->
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
-        <div><a href="menu.html">info@MUSES &gt;</a></div>
+        <div><a href="career.html">キャリア支援 &gt;</a></div>
       </div>
       <p>登録されていません</p>
     </header>
     <!--ヘッダ終わり-->
 
     <main id="career">
-      <div id="career_header"><img src="img/loupe.gif" /> キャリア支援</div>
-      <div id="career_calendar">カレンダー</div>
       <div id="career_ranking">人気企業ランキング</div>
-      <div id="career_memo">企業メモ</div>
-      <div id="career_button">求人参照</div>
-      <div id="career_button">セミナー参照</div>
-      <div id="career_button">キャリアガイダンス・イベント申し込み</div>
-      <div id="career_button">キャリアガイダンス・イベント申し込み状況参照</div>
-      <div id="career_footer"><img src="img/loupe.gif" /> キャリア支援</div>
     </main>
 
     <!--ここからフッタ-->
@@ -77,6 +62,6 @@
 
     <!--petite vueとmenu.jsの読み込み-->
     <script src="https://unpkg.com/petite-vue"></script>
-    <script src="cereer.js"></script>
+    <script src="ranking.js"></script>
   </body>
 </html>

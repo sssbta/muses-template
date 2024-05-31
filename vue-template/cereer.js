@@ -43,46 +43,7 @@ PetiteVue.createApp({
       const lastDay = new Date(year, month + 1, 0);
       const firstDayIndex = firstDay.getDay();
       const lastDayIndex = lastDay.getDate();
-      let calendarHTML = `<table>
-        <tr class="header">
-            <th colspan="7">${monthNames[month]} ${year}</th>
-        </tr>
-        <tr>
-            <th>日</th>
-            <th>月</th>
-            <th>火</th>
-            <th>水</th>
-            <th>木</th>
-            <th>金</th>
-            <th>土</th>
-        </tr>
-        <tr>`;
-
-      // 前月の日付を空白で埋める
-      for (let i = 0; i < firstDayIndex; i++) {
-        calendarHTML += `<td></td>`;
-      }
-
-      // カレンダーの日付を生成
-      for (let day = 1; day <= lastDayIndex; day++) {
-        const isToday =
-          today.getFullYear() === year &&
-          today.getMonth() === month &&
-          today.getDate() === day;
-        calendarHTML += `<td class="${isToday ? "today" : ""}">${day}</td>`;
-
-        if ((day + firstDayIndex) % 7 === 0 && day !== lastDayIndex) {
-          calendarHTML += `</tr><tr>`;
-        }
-      }
-
-      // 次月の日付を空白で埋める
-      for (let i = (firstDayIndex + lastDayIndex) % 7; i < 7 && i !== 0; i++) {
-        calendarHTML += `<td></td>`;
-      }
-
-      calendarHTML += `</tr></table>`;
-      calendar.innerHTML = calendarHTML;
+      
     }
 
     createCalendar(today.getFullYear(), today.getMonth());

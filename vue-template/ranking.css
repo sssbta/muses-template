@@ -1,0 +1,16 @@
+main#career {
+  margin-bottom: 2rem;
+  border: solid 0.5rem #f0f0f0;
+}
+
+:is(#career_button, #career_calendar, #career_ranking, #career_memo) {
+  padding: 0.5rem;
+  border: solid 0.1rem #f0f0f0;
+  background-color: #cad9e6;
+}
+
+:is(#career_header, #career_footer) {
+  padding: 0.5rem;
+  color: white;
+  background-color: #5a9674;
+}

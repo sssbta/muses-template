@@ -5,8 +5,8 @@ PetiteVue.createApp({
   unread: "" /*未読ニュース*/,
 
   async init() {
-    const username =
-      sessionStorage.username; /*セッションごとのユーザーネームを設定*/
+    const username = "作業中はログインしなくてもいいようにした。後で戻す。";
+    //  sessionStorage.username; /*セッションごとのユーザーネームを設定*/
     //if (!username) {
     //  /*ユーザーネームが入力されていない場合*/
     //  window.alert("ログインしてください"); /*アラートで警告*/

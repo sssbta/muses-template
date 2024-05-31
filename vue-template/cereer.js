@@ -5,6 +5,9 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
+  year: "",
+  month: "",
+  today: "",
 
   async init() {
     const username =
@@ -23,6 +26,14 @@ PetiteVue.createApp({
   get calender() {
     const calender = document.getElementById("career_calendar"); //htmlからidを取得
     const today = new Date();
+    console.log(today)
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const startDate = new Date(year, month - 1, 1); // 月の最初の日を取得
+    const endDate = new Date(year, month, 0); // 月の最後の日を取得
+    const endDayCount = endDate.getDate(); // 月の末日
+    const startDay = startDate.getDay(); // 月の最初の日の曜日を取得
+    let dayCount = 1; // 日にちのカウント
     const monthNames = [
       "1月",
       "2月",
@@ -43,7 +54,6 @@ PetiteVue.createApp({
       const lastDay = new Date(year, month + 1, 0);
       const firstDayIndex = firstDay.getDay();
       const lastDayIndex = lastDay.getDate();
-      
     }
 
     createCalendar(today.getFullYear(), today.getMonth());

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>キャリア支援</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="career.css" rel="stylesheet" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body @vue:mounted="init" v-cloak>
+    <!--initをロード（v-cloakはロード時の画面のチラつき防止）-->
+    <!--ここからヘッダ-->
+    <header>
+      <figure id="logo">
+        <img src="img/logo.png" />
+      </figure>
+      <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
+      <!--PC版へのリンク、残り時間、ログアウトのボタン-->
+      <div id="upper_menu">
+        <div>
+          <img src="img/pc_site.png" /><br />
+          PC版
+        </div>
+        <div>
+          <img src="img/timeout.png" /><br />
+          残り<br />約40分
+        </div>
+        <div>
+          <a href="login.html">
+            <img src="img/logout.png" /><br />
+            ログアウト
+          </a>
+        </div>
+      </div>
+      <!--ここから新着情報-->
+      <div id="news">
+        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
+        <div id="news_num">
+          <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
+        </div>
+      </div>
+      <!--ここからパンくずリスト-->
+      <div id="link">
+        <div><a href="index.html">HOME &gt;</a></div>
+        <div><a href="menu.html">info@MUSES &gt;</a></div>
+      </div>
+      <p>登録されていません</p>
+    </header>
+    <!--ヘッダ終わり-->
+
+    <main id="career">
+      <div id="career_header"><img src="img/loupe.gif" /> キャリア支援</div>
+      <div id="career_calendar">カレンダー</div>
+      <div id="career_ranking">人気企業ランキング</div>
+      <div id="career_memo">企業メモ</div>
+      <div id="career_button">求人参照</div>
+      <div id="career_button">セミナー参照</div>
+      <div id="career_button">キャリアガイダンス・イベント申し込み</div>
+      <div id="career_button">キャリアガイダンス・イベント申し込み状況参照</div>
+      <div id="career_footer"><img src="img/loupe.gif" /> キャリア支援</div>
+    </main>
+
+    <!--ここからフッタ-->
+    <footer>
+      <div id="link">
+        <div><a href="index.html">HOME &gt;</a></div>
+      </div>
+      <p>Information</p>
+      <div id="information"></div>
+    </footer>
+    <!--フッタ終わり-->
+
+    <!--petite vueとmenu.jsの読み込み-->
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="cereer.js"></script>
+  </body>
+</html>

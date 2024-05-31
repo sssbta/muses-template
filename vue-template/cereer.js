@@ -22,15 +22,69 @@ PetiteVue.createApp({
   },
   get calender() {
     const calender = document.getElementById("career_calendar"); //htmlからidを取得
-    const weeks = ["日", "月", "火", "水", "木", "金", "土"];
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const startDate = new Date(year, month - 1, 1); // 月の最初の日を取得
-    const endDate = new Date(year, month, 0); // 月の最後の日を取得
-    const endDayCount = endDate.getDate(); // 月の末日
-    const startDay = startDate.getDay(); // 月の最初の日の曜日を取得
-    let dayCount = 1; // 日にちのカウント
-    
+    const today = new Date();
+    const monthNames = [
+      "1月",
+      "2月",
+      "3月",
+      "4月",
+      "5月",
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月",
+    ];
+
+    function createCalendar(year, month) {
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const firstDayIndex = firstDay.getDay();
+      const lastDayIndex = lastDay.getDate();
+      let calendarHTML = `<table>
+        <tr class="header">
+            <th colspan="7">${monthNames[month]} ${year}</th>
+        </tr>
+        <tr>
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+        </tr>
+        <tr>`;
+
+      // 前月の日付を空白で埋める
+      for (let i = 0; i < firstDayIndex; i++) {
+        calendarHTML += `<td></td>`;
+      }
+
+      // カレンダーの日付を生成
+      for (let day = 1; day <= lastDayIndex; day++) {
+        const isToday =
+          today.getFullYear() === year &&
+          today.getMonth() === month &&
+          today.getDate() === day;
+        calendarHTML += `<td class="${isToday ? "today" : ""}">${day}</td>`;
+
+        if ((day + firstDayIndex) % 7 === 0 && day !== lastDayIndex) {
+          calendarHTML += `</tr><tr>`;
+        }
+      }
+
+      // 次月の日付を空白で埋める
+      for (let i = (firstDayIndex + lastDayIndex) % 7; i < 7 && i !== 0; i++) {
+        calendarHTML += `<td></td>`;
+      }
+
+      calendarHTML += `</tr></table>`;
+      calendar.innerHTML = calendarHTML;
+    }
+
+    createCalendar(today.getFullYear(), today.getMonth());
   },
 }).mount();

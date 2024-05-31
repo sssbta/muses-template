@@ -14,3 +14,32 @@ main#career {
   color: white;
   background-color: #5a9674;
 }
+#calendar {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+#calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#calendar th,
+#calendar td {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+#calendar th {
+  background-color: #f0f0f0;
+}
+
+#calendar .header {
+  background-color: #e0e0e0;
+}
+
+#calendar .today {
+  background-color: #ffeb3b;
+}

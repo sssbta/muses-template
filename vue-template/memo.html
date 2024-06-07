@@ -1,0 +1,94 @@
+<!--金澤雅-->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUSESトップ</title>
+    <link href="index.css" rel="stylesheet" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+    <!--petite-vue読み込み前にページを表示することへの対策-->
+  </head>
+
+  <body @vue:mounted="init" v-cloak>
+    <!--petite-vue読み込み前にページを表示することへの対策-->
+
+    <header>
+      <figure id="logo">
+        <!--musesロゴ画像の挿入-->
+        <img src="img/logo.png" />
+      </figure>
+
+      <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
+      <!--名前部分-->
+
+      <div id="upper_menu">
+        <!--上部メニュー　上のPC版・残り時間・ログアウトボタン-->
+        <div>
+          <img src="img/pc_site.png" /><br />
+          PC版
+        </div>
+        <div>
+          <img src="img/timeout.png" /><br />
+          残り<br />約40分
+        </div>
+        <div>
+          <a href="login.html">
+            <img src="img/logout.png" /><br />
+            ログアウト
+          </a>
+        </div>
+      </div>
+
+      <div id="news">
+        <!--新着情報-->
+        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
+        <div id="news_num">
+          <!--未読件数表示-->
+          <img src="img/board.png" />未読掲示が {{unread}}件 あります！
+        </div>
+      </div>
+
+      <div id="link">
+        <!--ホームボタン-->
+        <div>HOME &gt;<!--"&gt" = ">の記号" --></div>
+      </div>
+      <p>登録されていません</p>
+    </header>
+
+    <main id="top">
+      <!--メニュー各種ボタン-->
+      <div>
+        <a href="menu.html"><img src="img/info_muses.png" /><br />info@MUSES</a>
+      </div>
+      <div><img src="img/paper.png" /><br />履修</div>
+      <div><img src="img/cancelling.png" /><br />休講・補講等情報参照</div>
+      <div><img src="img/paper.png" /><br />出欠</div>
+      <div><img src="img/survey.png" /><br />授業アンケート</div>
+      <div>
+        <a href="career.html"><img src="img/career.png" /><br />キャリア支援</a>
+      </div>
+      <div><img src="img/syllabus.png" /><br />シラバス</div>
+    </main>
+
+    <footer>
+      <div id="link">
+        <!--ホームボタン-->
+        <div>HOME &gt;<!--"&gt" = ">の記号" --></div>
+      </div>
+
+      <p>Information</p>
+      <div id="information"></div>
+    </footer>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <!--petite-vueオブジェクトの読み込み-->
+    <script src="index.js"></script>
+    <!--petite-vueファイルの読み込み-->
+  </body>
+</html>

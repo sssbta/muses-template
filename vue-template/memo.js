@@ -3,7 +3,10 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
-  memodata: [],
+  data: [],
+  name: "",
+  url: "",
+  text: "",
 
   async init() {
     const username =
@@ -17,8 +20,8 @@ PetiteVue.createApp({
 
     const res = await fetch("memodata.json");
     const obj = await res.json();
-    this.memodata = obj.list;
-    console.log(this.memodata);
-    this.unread = this.memodata.length;
+    this.data = obj.list;
+    console.log(this.data);
+    this.unread = this.data.length;
   },
 }).mount();

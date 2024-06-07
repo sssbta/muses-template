@@ -54,7 +54,7 @@ PetiteVue.createApp({
       "12月",
     ];
     function createCalendar(year, month) {
-      calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
+      calendarHeader.innerText = `${year}年 ${monthNames[month]}`;
       let html = "<tr>";
 
       // 空白のセルを追加

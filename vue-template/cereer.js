@@ -25,6 +25,7 @@ PetiteVue.createApp({
   },
   get calender() {
     const calender = document.getElementById("career_calendar"); //htmlからidを取得
+    const calendarTable = document.getElementById("calendar_table");
     const calendarHeader = document.getElementById("calendar_header");
     const today = new Date();
     console.log(today);

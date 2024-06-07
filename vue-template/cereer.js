@@ -31,7 +31,7 @@ PetiteVue.createApp({
     console.log(today);
     const year = today.getFullYear();
     this.year = year; //表題の年
-    const month = today.getMonth() + 2;
+    const month = today.getMonth() + 1;
     this.month = month; //表題の年
     console.log(this.year, this.month, month);
     const startDate = new Date(year, month, 1); // 月の最初の日を取得

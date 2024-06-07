@@ -1,34 +1,27 @@
-<!--金澤雅-->
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MUSESトップ</title>
+    <title>MUSESメニュー</title>
     <link href="index.css" rel="stylesheet" />
+    <link href="menu.css" rel="stylesheet" />
     <style>
       [v-cloak] {
         display: none;
       }
     </style>
-    <!--petite-vue読み込み前にページを表示することへの対策-->
   </head>
-
   <body @vue:mounted="init" v-cloak>
-    <!--petite-vue読み込み前にページを表示することへの対策-->
-
+    <!--initをロード（v-cloakはロード時の画面のチラつき防止）-->
+    <!--ここからヘッダ-->
     <header>
       <figure id="logo">
-        <!--musesロゴ画像の挿入-->
         <img src="img/logo.png" />
       </figure>
-
       <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
-      <!--名前部分-->
-
+      <!--PC版へのリンク、残り時間、ログアウトのボタン-->
       <div id="upper_menu">
-        <!--上部メニュー　上のPC版・残り時間・ログアウトボタン-->
         <div>
           <img src="img/pc_site.png" /><br />
           PC版
@@ -44,51 +37,69 @@
           </a>
         </div>
       </div>
-
+      <!--ここから新着情報-->
       <div id="news">
-        <!--新着情報-->
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
         <div id="news_num">
-          <!--未読件数表示-->
-          <img src="img/board.png" />未読掲示が {{unread}}件 あります！
+          <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
         </div>
       </div>
-
+      <!--ここからパンくずリスト-->
       <div id="link">
-        <!--ホームボタン-->
-        <div>HOME &gt;<!--"&gt" = ">の記号" --></div>
+        <div><a href="index.html">HOME &gt;</a></div>
+        <div>info@MUSES &gt;</div>
       </div>
       <p>登録されていません</p>
     </header>
+    <!--ヘッダ終わり-->
 
-    <main id="top">
-      <!--メニュー各種ボタン-->
-      <div>
-        <a href="menu.html"><img src="img/info_muses.png" /><br />info@MUSES</a>
+    <!--ここから本文-->
+    <main id="info">
+      <div id="info_header"><img src="img/loupe.gif" /> info@MUSES参照</div>
+      <div id="info_link">
+        <div id="caution">
+          ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
+        </div>
+        <div id="unread_num">
+          <span class="exmark">!</span>：未読({{unread}}件)
+        </div>
+
+        <div id="info_list" v-if="data">
+          <!--メールリストの変数dataに値が入っていたら-->
+          <!--データの中身を出力するforループ-->
+          <div class="record" v-for="item of data">
+            <div class="date">{{item.date}}</div>
+            <div class="from" v-html="item.from"></div>
+            <div class="imp">{{item.imp}}</div>
+            <div class="tri">&nbsp;</div>
+            <!--▶-->
+            <div class="mark"><span class="exmark">!</span></div>
+            <!--「！」-->
+            <div class="subject">{{item.subject}}</div>
+          </div>
+          <!--forループ終わり-->
+        </div>
       </div>
-      <div><img src="img/paper.png" /><br />履修</div>
-      <div><img src="img/cancelling.png" /><br />休講・補講等情報参照</div>
-      <div><img src="img/paper.png" /><br />出欠</div>
-      <div><img src="img/survey.png" /><br />授業アンケート</div>
-      <div>
-        <a href="career.html"><img src="img/career.png" /><br />キャリア支援</a>
+      <div id="control">
+        <div class="info_btn">既読も表示</div>
+        <div class="info_btn">info@MUSES 情報検索</div>
       </div>
-      <div><img src="img/syllabus.png" /><br />シラバス</div>
+      <div id="info_footer"><img src="img/loupe.gif" /> info@MUSES参照</div>
     </main>
+    <!--本文終わり-->
 
+    <!--ここからフッタ-->
     <footer>
       <div id="link">
-        <!--ホームボタン-->
-        <div>HOME &gt;<!--"&gt" = ">の記号" --></div>
+        <div><a href="index.html">HOME &gt;</a></div>
       </div>
-
       <p>Information</p>
       <div id="information"></div>
     </footer>
+    <!--フッタ終わり-->
 
+    <!--petite vueとmenu.jsの読み込み-->
     <script src="https://unpkg.com/petite-vue"></script>
-    <!--petite-vueオブジェクトの読み込み-->
-    <script src="index.js"></script>
-    <!--petite-vueファイルの読み込み-->
+    <script src="menu.js"></script>
   </body>
 </html>

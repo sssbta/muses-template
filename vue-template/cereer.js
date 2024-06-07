@@ -30,11 +30,11 @@ PetiteVue.createApp({
     const today = new Date();
     console.log(today);
     const year = today.getFullYear();
-    this.year = year;
-    const month = today.getMonth()+1 ;
-    this.month = month ;
-    console.log(this.year, this.month,month);
-    const startDate = new Date(year, month , 1); // 月の最初の日を取得
+    this.year = year; //表題の年
+    const month = today.getMonth() + 2;
+    this.month = month; //表題の年
+    console.log(this.year, this.month, month);
+    const startDate = new Date(year, month, 1); // 月の最初の日を取得
     const endDate = new Date(year, month, 0); // 月の最後の日を取得
     const endDayCount = endDate.getDate(); // 月の末日
     const startDay = startDate.getDay(); // 月の最初の日の曜日を取得

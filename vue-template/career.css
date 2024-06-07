@@ -43,3 +43,9 @@ main#career {
 #calendar .today {
   background-color: #ffeb3b;
 }
+
+/*リンクの色・アンダーラインが出ないようにする*/
+#career_ranking a {
+  color: inherit;
+  text-decoration: none;
+}

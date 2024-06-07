@@ -25,12 +25,15 @@ PetiteVue.createApp({
   },
   get calender() {
     const calender = document.getElementById("career_calendar"); //htmlからidを取得
+    const calendarTable = document.getElementById("calendar_table");
+    const calendarHeader = document.getElementById("calendar_header");
     const today = new Date();
     console.log(today);
     const year = today.getFullYear();
     this.year = year;
     const month = today.getMonth() + 1;
     this.month = month;
+    console.log(year, month);
     const startDate = new Date(year, month - 1, 1); // 月の最初の日を取得
     const endDate = new Date(year, month, 0); // 月の最後の日を取得
     const endDayCount = endDate.getDate(); // 月の末日
@@ -50,14 +53,38 @@ PetiteVue.createApp({
       "11月",
       "12月",
     ];
-
     function createCalendar(year, month) {
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const firstDayIndex = firstDay.getDay();
-      const lastDayIndex = lastDay.getDate();
+      calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
+      let html = "<tr>";
+
+      // 空白のセルを追加
+      for (let i = 0; i < startDay; i++) {
+        html += "<td></td>";
+      }
+
+      // 日にちを追加
+      for (let i = startDay; i < 7; i++) {
+        html += `<td>${dayCount}</td>`;
+        dayCount++;
+      }
+      html += "</tr>";
+
+      while (dayCount <= endDayCount) {
+        html += "<tr>";
+        for (let i = 0; i < 7; i++) {
+          if (dayCount <= endDayCount) {
+            html += `<td>${dayCount}</td>`;
+            dayCount++;
+          } else {
+            html += "<td></td>";
+          }
+        }
+        html += "</tr>";
+      }
+
+      calendarTable.innerHTML += html;
     }
 
-    createCalendar(today.getFullYear(), today.getMonth());
+    createCalendar(year, month - 1);
   },
 }).mount();

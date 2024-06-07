@@ -61,6 +61,7 @@
         <input type="date" name="birthday" />
         <input v-model="url" />
         <input v-model="text" />
+        <button>お気に入り</button><button>登録する</button>
         <p>{{text}}</p>
 
         <div id="info_list" v-if="data">
@@ -68,7 +69,7 @@
           <!--データの中身を出力するforループ-->
           <div class="record" v-for="item of data">
             <div class="date">記入日：{{item.date}}</div>
-            <div class="name" v-html="item.name"></div>
+            <div class="name">企業名：{{item.name}}</div>
             <div class="favo">{{item.favo}}</div>
             <div class="tri">&nbsp;</div>
             <!--▶-->

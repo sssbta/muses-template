@@ -4,6 +4,9 @@ PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
   data: [],
+  name: "",
+  url: "",
+  text: "",
 
   async init() {
     const username =

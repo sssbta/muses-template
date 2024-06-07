@@ -47,7 +47,7 @@
       <!--ここからパンくずリスト-->
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
-        <div>info@MUSES &gt;</div>
+        <div><a href="career.html">キャリア支援 &gt;</a></div>
       </div>
       <p>登録されていません</p>
     </header>
@@ -55,36 +55,30 @@
 
     <!--ここから本文-->
     <main id="info">
-      <div id="info_header"><img src="img/loupe.gif" /> info@MUSES参照</div>
+      <div id="info_header">　企業メモ</div>
       <div id="info_link">
         <div id="caution">
           ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
         </div>
-        <div id="unread_num">
-          <span class="exmark">!</span>：未読({{unread}}件)
-        </div>
 
-        <div id="info_list" v-if="data">
+        <div id="info_list" v-if="memodata">
           <!--メールリストの変数dataに値が入っていたら-->
           <!--データの中身を出力するforループ-->
-          <div class="record" v-for="item of data">
+          <div class="record" v-for="item of memodata">
             <div class="date">{{item.date}}</div>
-            <div class="from" v-html="item.from"></div>
-            <div class="imp">{{item.imp}}</div>
+            <div class="name" v-html="item.name"></div>
+            <div class="favo">{{item.favo}}</div>
             <div class="tri">&nbsp;</div>
             <!--▶-->
             <div class="mark"><span class="exmark">!</span></div>
             <!--「！」-->
-            <div class="subject">{{item.subject}}</div>
+            <div class="start">{{item.start}}</div>
           </div>
           <!--forループ終わり-->
         </div>
       </div>
-      <div id="control">
-        <div class="info_btn">既読も表示</div>
-        <div class="info_btn">info@MUSES 情報検索</div>
-      </div>
-      <div id="info_footer"><img src="img/loupe.gif" /> info@MUSES参照</div>
+
+      <div id="info_footer">　企業メモ</div>
     </main>
     <!--本文終わり-->
 

@@ -64,9 +64,8 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        html += `<td><a href="date.html?date=${year}-${ month + 1 }-${dayCount}">${dayCount}</a></td>`;
-          dayCount++;
-        } 
+        html += `<td>${dayCount}</td>`;
+        dayCount++;
       }
       html += "</tr>";
 

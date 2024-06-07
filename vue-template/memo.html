@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MUSESメニュー</title>
     <link href="index.css" rel="stylesheet" />
-    <link href="menu.css" rel="stylesheet" />
+    <link href="memo.css" rel="stylesheet" />
     <style>
       [v-cloak] {
         display: none;
@@ -61,18 +61,16 @@
           ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
         </div>
 
-        <div id="info_list" v-if="memodata">
+        <div id="info_list" v-if="data">
           <!--メールリストの変数dataに値が入っていたら-->
           <!--データの中身を出力するforループ-->
-          <div class="record" v-for="item of memodata">
-            <div class="date">{{item.date}}</div>
+          <div class="record" v-for="item of data">
+            <div class="date">記入日：{{item.date}}</div>
             <div class="name" v-html="item.name"></div>
             <div class="favo">{{item.favo}}</div>
             <div class="tri">&nbsp;</div>
             <!--▶-->
-            <div class="mark"><span class="exmark">!</span></div>
-            <!--「！」-->
-            <div class="start">{{item.start}}</div>
+            <div class="start">メモ内容：{{item.start}}</div>
           </div>
           <!--forループ終わり-->
         </div>
@@ -94,6 +92,6 @@
 
     <!--petite vueとmenu.jsの読み込み-->
     <script src="https://unpkg.com/petite-vue"></script>
-    <script src="menu.js"></script>
+    <script src="memo.js"></script>
   </body>
 </html>

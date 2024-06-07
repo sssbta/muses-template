@@ -26,9 +26,11 @@ PetiteVue.createApp({
   get calender() {
     const calender = document.getElementById("career_calendar"); //htmlからidを取得
     const today = new Date();
-    console.log(today)
+    console.log(today);
     const year = today.getFullYear();
+    this.year = year;
     const month = today.getMonth() + 1;
+    this.month = month;
     const startDate = new Date(year, month - 1, 1); // 月の最初の日を取得
     const endDate = new Date(year, month, 0); // 月の最後の日を取得
     const endDayCount = endDate.getDate(); // 月の末日

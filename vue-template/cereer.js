@@ -51,14 +51,38 @@ PetiteVue.createApp({
       "11月",
       "12月",
     ];
-
     function createCalendar(year, month) {
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const firstDayIndex = firstDay.getDay();
-      const lastDayIndex = lastDay.getDate();
+      calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
+      let html = "<tr>";
+
+      // 空白のセルを追加
+      for (let i = 0; i < startDay; i++) {
+        html += "<td></td>";
+      }
+
+      // 日にちを追加
+      for (let i = startDay; i < 7; i++) {
+        html += `<td>${dayCount}</td>`;
+        dayCount++;
+      }
+      html += "</tr>";
+
+      while (dayCount <= endDayCount) {
+        html += "<tr>";
+        for (let i = 0; i < 7; i++) {
+          if (dayCount <= endDayCount) {
+            html += `<td>${dayCount}</td>`;
+            dayCount++;
+          } else {
+            html += "<td></td>";
+          }
+        }
+        html += "</tr>";
+      }
+
+      calendarTable.innerHTML += html;
     }
 
-    createCalendar(today.getFullYear(), today.getMonth());
+    createCalendar(year, month - 1);
   },
 }).mount();

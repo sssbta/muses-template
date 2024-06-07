@@ -5,13 +5,13 @@ PetiteVue.createApp({
   unread: "" /*未読ニュース*/,
 
   async init() {
-    const username = "作業中はログインしなくてもいいようにした。後で戻す。";
-    //  sessionStorage.username; /*セッションごとのユーザーネームを設定*/
-    //if (!username) {
-    //  /*ユーザーネームが入力されていない場合*/
-    //  window.alert("ログインしてください"); /*アラートで警告*/
-    //  location.href = "login.html"; /*ログインページを表示する*/
-    //}
+    //const username = "作業中はログインしなくてもいいようにした。後で戻す。";
+    sessionStorage.username; /*セッションごとのユーザーネームを設定*/
+    if (!username) {
+      /*ユーザーネームが入力されていない場合*/
+      window.alert("ログインしてください"); /*アラートで警告*/
+      location.href = "login.html"; /*ログインページを表示する*/
+    }
     this.username = username; /*ユーザーネームの反映*/
 
     const res = await fetch("data.json"); /*ニュースのデータ取得*/

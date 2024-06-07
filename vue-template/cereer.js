@@ -39,7 +39,7 @@ PetiteVue.createApp({
     const endDayCount = endDate.getDate(); // 月の末日
     const startDay = startDate.getDay(); // 月の最初の日の曜日を取得
     let dayCount = 1; // 日にちのカウント
-    const monthNames = [
+    /*const monthNames = [
       "1月",
       "2月",
       "3月",
@@ -52,7 +52,7 @@ PetiteVue.createApp({
       "10月",
       "11月",
       "12月",
-    ];
+    ];*/
     function createCalendar(year, month) {
       calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
       let html = "<tr>";

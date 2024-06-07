@@ -92,7 +92,7 @@ main#info {
   grid-row: 2 / 3;
 }
 
-.start {
+.text {
   grid-column: 2 / 5;
   grid-row: 2 / 3;
   font-weight: bold;

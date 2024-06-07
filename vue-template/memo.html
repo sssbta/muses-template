@@ -57,9 +57,11 @@
     <main id="info">
       <div id="info_header">　企業メモ</div>
       <div id="info_link">
-        <div id="caution">
-          ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
-        </div>
+        <input v-model="name" />
+        <input type="date" name="birthday" />
+        <input v-model="url" />
+        <input v-model="text" />
+        <p>{{text}}</p>
 
         <div id="info_list" v-if="data">
           <!--メールリストの変数dataに値が入っていたら-->
@@ -70,7 +72,7 @@
             <div class="favo">{{item.favo}}</div>
             <div class="tri">&nbsp;</div>
             <!--▶-->
-            <div class="start">メモ内容：{{item.start}}</div>
+            <div class="text">メモ内容：{{item.text}}</div>
           </div>
           <!--forループ終わり-->
         </div>

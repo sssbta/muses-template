@@ -3,13 +3,22 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
+  department: "",
   gakubuList: ["大情", "大食", "大日", "大環"],
+  carrerevent: "",
+  eventList: ["インターン", "セミナー"],
   companies: [
     {
       companyName: "企業名A",
       companyInfo: "企業の紹介文",
       companyDate: "八月中旬",
       numberOfInterest: 5,
+    },
+    {
+      companyName: "企業名B",
+      companyInfo: "企業の紹介文",
+      companyDate: "七月",
+      numberOfInterest: 4,
     },
   ],
 

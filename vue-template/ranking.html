@@ -54,7 +54,14 @@
         <option>大情</option>
         <option>大食</option>
         <option>大日</option>
-      </select> -->
+      </select>
+      <select id="event">
+        <option selected disabled>イベントの種類を選んでください。</option>
+        <option>企業</option>
+        <option>インターン</option>
+        <option>セミナー</option>
+      </select>
+      -->
 
       <div id="career_ranking">人気企業ランキング</div>
       <select v-model="department">
@@ -62,12 +69,11 @@
         <option v-for="item in gakubuList">{{item}}</option>
       </select>
 
-      <select id="event">
-        <option selected disabled>イベントの種類を選んでください。</option>
-        <option>企業</option>
-        <option>インターン</option>
-        <option>セミナー</option>
+      <select v-model="carrerevent">
+        <option selected disabled value="">イベントの種類を選んでください。</option>
+        <option v-for="item in eventList">{{item}}</option>
       </select>
+
       <div id="career_company">あなたにおすすめの企業</div>
       <div class="recommend" v-for="item of companies">
         <div class="companyName">{{item.companyName}}</div>

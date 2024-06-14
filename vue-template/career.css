@@ -13,7 +13,6 @@ main#career {
   padding: 0.5rem;
   color: white;
   background-color: #5a9674;
-
 }
 #calendar_table {
   width: 100%;
@@ -37,9 +36,9 @@ main#career {
   background-color: #f0f0f0;
 }
 
-/*#calendar_header {
-  
-} */
+#calendar_header {
+  height: 30px;
+}
 
 #calendar .today {
   background-color: #ffeb3b;

@@ -21,7 +21,7 @@ main#career {
 #calendar_table th,
 #calendar_table td {
   border: 1px solid #000;
-  width: 14.28%; /* 7列なので、100%を7で割る */
+  width: 14.28%; /* セルの横幅を７等分 */
   height: 80px; /* セルの高さを調整 */
   text-align: center;
   vertical-align: top;

@@ -85,6 +85,13 @@ PetiteVue.createApp({
       calendarTable.innerHTML += html;
     }
 
+    const dayCells = document.querySelectorAll(".calendar-day");
+    dayCells.forEach((cell) => {
+      cell.addEventListener("click", () => {
+        window.alert(cell.textContent + "日がクリックされました");
+      });
+    });
+
     createCalendar(year, month - 1);
   },
 }).mount();

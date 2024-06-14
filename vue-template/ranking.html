@@ -41,6 +41,7 @@
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
         <div><a href="career.html">キャリア支援 &gt;</a></div>
+
       </div>
       <p>登録されていません</p>
     </header>
@@ -70,8 +71,14 @@
       <div id="career_company">あなたにおすすめの企業</div>
       <div class="recommend" v-for="item of companies">
         <div class="companyName">{{item.companyName}}</div>
+        <div class="numberOfInterest">他の希望者：{{item.numberOfInterest}}人</div>
         <div class="companyInfo">{{item.companyInfo}}</div>
+        <div class="companyDate">開催時期：{{item.companyDate}}</div>
+        <button class="companyForm">申し込む</button>
       </div>
+
+    </div>
+      
     </main>
 
     <!--ここからフッタ-->

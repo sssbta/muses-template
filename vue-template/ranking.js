@@ -6,8 +6,10 @@ PetiteVue.createApp({
   gakubuList: ["大情", "大食", "大日", "大環"],
   companies: [
     {
-      companyName: "今北産業",
-      companyInfo: "三行で伝える想い 今北産業.",
+      companyName: "企業名A",
+      companyInfo: "企業の紹介文",
+      companyDate: "八月中旬",
+      numberOfInterest: 5,
     },
   ],
 

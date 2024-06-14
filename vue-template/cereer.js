@@ -85,6 +85,8 @@ PetiteVue.createApp({
       calendarTable.innerHTML += html;
     }
 
+   
+
     createCalendar(year, month - 1);
   },
 }).mount();

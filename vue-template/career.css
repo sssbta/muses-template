@@ -13,7 +13,6 @@ main#career {
   padding: 0.5rem;
   color: white;
   background-color: #5a9674;
-
 }
 #calendar_table {
   width: 100%;
@@ -22,7 +21,7 @@ main#career {
 #calendar_table th,
 #calendar_table td {
   border: 1px solid #000;
-  width: 14.28%; /* 7列なので、100%を7で割る */
+  width: 14.28%; /* セルの横幅を７等分 */
   height: 80px; /* セルの高さを調整 */
   text-align: center;
   vertical-align: top;
@@ -33,18 +32,13 @@ main#career {
   cursor: pointer;
 }
 
-#calendar th {
-  background-color: #f0f0f0;
-}
+
 
 #calendar_header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px; /* ヘッダーの高さを適宜調整 */
-} 
+  height: 30px;
+}
 
-#calendar .today {
+#calendar_today {
   background-color: #ffeb3b;
 }
 

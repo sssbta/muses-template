@@ -13,14 +13,11 @@
     </style>
   </head>
   <body @vue:mounted="init" v-cloak>
-    <!--initをロード（v-cloakはロード時の画面のチラつき防止）-->
-    <!--ここからヘッダ-->
     <header>
       <figure id="logo">
         <img src="img/logo.png" />
       </figure>
       <div id="user_name"><img src="img/user_icon.png" />{{username}} さん</div>
-      <!--PC版へのリンク、残り時間、ログアウトのボタン-->
       <div id="upper_menu">
         <div>
           <img src="img/pc_site.png" /><br />
@@ -59,14 +56,18 @@
       <div id="form">
         <label>企業名：<input v-model="name" /></label><br />
         <label>記入日：<input type="date" name="writeing" /></label><br />
-        <label>メモ　：<input v-model="text" /></label><br />
+        <label
+          >メモ　：<textarea
+            cols="40"
+            rows="5"
+            maxlength="250"
+          ></textarea></label
+        ><br />
         <button>お気に入り</button>
         <button>登録する</button>
       </div>
 
       <div id="info_list" v-if="data">
-        <!--メールリストの変数dataに値が入っていたら-->
-        <!--データの中身を出力するforループ-->
         <div class="record" v-for="item of data">
           <div class="date">記入日：{{item.date}}</div>
           <div class="name">企業名：{{item.name}}</div>
@@ -75,7 +76,6 @@
           <!--▶-->
           <div class="text">メモ内容：{{item.text}}</div>
         </div>
-        <!--forループ終わり-->
       </div>
 
       <div id="info_footer">　企業メモ</div>

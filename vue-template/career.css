@@ -22,7 +22,7 @@ main#career {
 #calendar_table td {
   border: 1px solid #000;
   width: 14.28%; /* 7列なので、100%を7で割る */
-  height: 100px; /* セルの高さを調整 */
+  height: 80px; /* セルの高さを調整 */
   text-align: center;
   vertical-align: top;
   padding: 5px;

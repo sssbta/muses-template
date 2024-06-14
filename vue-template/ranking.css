@@ -3,14 +3,31 @@ main#career {
   border: solid 0.5rem #f0f0f0;
 }
 
-:is(#career_button, #career_calendar, #career_ranking, #career_memo) {
+:is(#career_button, #career_calendar, #career_ranking, #career_company) {
   padding: 0.5rem;
+  color: #f0f0f0;
   border: solid 0.1rem #f0f0f0;
-  background-color: #cad9e6;
+  background-color: #5a9674;
 }
 
 :is(#career_header, #career_footer) {
   padding: 0.5rem;
   color: white;
   background-color: #5a9674;
+}
+
+#career_company {
+  margin-top: 20px;
+}
+
+.recommend {
+  padding: 0.5rem;
+  border: solid 0.1rem #f0f0f0;
+  background-color: #d2fbaf;
+}
+
+.companyInfo {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 0.75rem;
 }

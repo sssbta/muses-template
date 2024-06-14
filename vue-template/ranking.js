@@ -3,6 +3,13 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
+  gakubuList: ["大情", "大食", "大日", "大環"],
+  companies: [
+    {
+      companyName: "今北産業",
+      companyInfo: "三行で伝える想い 今北産業.",
+    },
+  ],
 
   async init() {
     //const username = "作業中はログインしなくてもいいようにした。後で戻す。";

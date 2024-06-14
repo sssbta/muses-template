@@ -13,7 +13,7 @@ main#career {
   padding: 0.5rem;
   color: white;
   background-color: #5a9674;
-  
+
 }
 #calendar_table {
   width: 100%;
@@ -37,8 +37,12 @@ main#career {
   background-color: #f0f0f0;
 }
 
-#calendar .header {
-  background-color: #e0e0e0;
+#calendar_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* ヘッダーの高さを適宜調整 */
+  font-size: 24px; /* フォントサイズを適宜調整 */
 }
 
 #calendar .today {

@@ -120,3 +120,12 @@ button {
   color: white;
   background-color: #555555;
 }
+
+label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+textarea {
+  vertical-align: top;
+}

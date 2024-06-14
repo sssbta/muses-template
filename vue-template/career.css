@@ -42,8 +42,7 @@ main#career {
   justify-content: center;
   align-items: center;
   height: 50px; /* ヘッダーの高さを適宜調整 */
-  font-size: 24px; /* フォントサイズを適宜調整 */
-}
+} 
 
 #calendar .today {
   background-color: #ffeb3b;

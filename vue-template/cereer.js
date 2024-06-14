@@ -89,6 +89,7 @@ PetiteVue.createApp({
     dayCells.forEach((cell) => {
       cell.addEventListener("click", () => {
         window.alert(cell.textContent + "日がクリックされました");
+        console.log("クリックイベント");
       });
     });
 

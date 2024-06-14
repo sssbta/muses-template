@@ -128,4 +128,10 @@ label {
 }
 textarea {
   vertical-align: top;
+  margin-top: 0.2rem;
+}
+
+#control {
+  margin-left: 1rem;
+  margin: 0.7rem;
 }

@@ -26,8 +26,25 @@ main#career {
   background-color: #d2fbaf;
 }
 
+.companyName {
+  font-weight: bold;
+}
+.numberOfInterest {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 0.75rem;
+  text-align: right;
+}
 .companyInfo {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   font-size: 0.75rem;
+}
+.companyDate {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 0.75rem;
+}
+#companyForm {
+  margin: 0.5rem;
 }

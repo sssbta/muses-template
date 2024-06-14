@@ -37,12 +37,9 @@ main#career {
   background-color: #f0f0f0;
 }
 
-#calendar_header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px; /* ヘッダーの高さを適宜調整 */
-} 
+/*#calendar_header {
+  
+} */
 
 #calendar .today {
   background-color: #ffeb3b;

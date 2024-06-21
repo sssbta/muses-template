@@ -18,20 +18,5 @@
       "favo": "",
       "text": "まだ訪問していないが、～だと聞……"
     }
-  ],
-
-  "companieslist": [
-    {
-      "companyName": "企業名A",
-      "companyInfo": "企業の紹介文",
-      "companyDate": "八月中旬",
-      "numberOfInterest": 5
-    },
-    {
-      "companyName": "企業名B",
-      "companyInfo": "企業の紹介文",
-      "companyDate": "七月",
-      "numberOfInterest": 4
-    }
   ]
 }

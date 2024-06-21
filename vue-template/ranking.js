@@ -20,7 +20,7 @@ PetiteVue.createApp({
     }
     this.username = username; /*ユーザーネームの反映*/
 
-    const res = await fetch("data.json"); /*ニュースのデータ取得*/
+    const res = await fetch("memodata.json"); /*ニュースのデータ取得*/
     const obj = await res.json(); /*ニュースのデータの読み込み処理*/
     this.unread = obj.list.length; /*ニュースデータを未読リストに追加*/
     this.companies = obj.companieslist;

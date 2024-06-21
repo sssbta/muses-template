@@ -5,9 +5,9 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
-  year: "",/*カレンダー　年 */
-  month: "",/*カレンダー　月 */
-  today: "",/*カレンダー　日 */
+  year: "" /*カレンダー　年 */,
+  month: "" /*カレンダー　月 */,
+  today: "" /*カレンダー　日 */,
 
   async init() {
     const username =
@@ -84,9 +84,15 @@ PetiteVue.createApp({
 
       calendarTable.innerHTML += html;
     }
-
-   
+    function insertText(year, month, day, text) {
+      const cell = document.getElementById(`day-${year}-${month}-${day}`);
+      if (cell) {
+        cell.innerHTML += `<div>${text}</div>`;
+      }
+    }
 
     createCalendar(year, month - 1);
+
+    insertText(year, month, 15, "イベント");
   },
 }).mount();

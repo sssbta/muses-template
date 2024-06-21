@@ -69,7 +69,7 @@ PetiteVue.createApp({
       }
       html += "</tr>";
 
-      /*while (dayCount <= endDayCount) {
+      while (dayCount <= endDayCount) {
         html += "<tr>";
         for (let i = 0; i < 7; i++) {
           if (dayCount <= endDayCount) {
@@ -80,19 +80,19 @@ PetiteVue.createApp({
           }
         }
         html += "</tr>";
-      }*/
+      }
 
       calendarTable.innerHTML += html;
     }
-    function insertText(year, month, day, text) {
+    /*function insertText(year, month, day, text) {
       const cell = document.getElementById(`day-${year}-${month}-${day}`);
       if (cell) {
         cell.innerHTML += `<div>${text}</div>`;
       }
-    }
+    }*/
 
     createCalendar(year, month - 1);
 
-    insertText(year, month, 15, "イベント");
+    //insertText(year, month, 15, "イベント");
   },
 }).mount();

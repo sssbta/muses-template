@@ -5,9 +5,9 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
-  year: "",
-  month: "",
-  today: "",
+  year: "",/*カレンダー　年 */
+  month: "",/*カレンダー　月 */
+  today: "",/*カレンダー　日 */
 
   async init() {
     const username =

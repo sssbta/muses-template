@@ -37,6 +37,13 @@
           </a>
         </div>
       </div>
+            <!--ここから新着情報-->
+            <div id="news">
+              <div id="news_title"><img src="img/infoman.png" />新着情報</div>
+              <div id="news_num">
+                <img src="img/board.png" />未読掲示が {{unread}} 件 あります！
+              </div>
+            </div>
       <!--ここからパンくずリスト-->
       <div id="link">
         <div><a href="index.html">HOME &gt;</a></div>
@@ -54,7 +61,14 @@
         <option>大情</option>
         <option>大食</option>
         <option>大日</option>
-      </select> -->
+      </select>
+      <select id="event">
+        <option selected disabled>イベントの種類を選んでください。</option>
+        <option>企業</option>
+        <option>インターン</option>
+        <option>セミナー</option>
+      </select>
+      -->
 
       <div id="career_ranking">人気企業ランキング</div>
       <select v-model="department">
@@ -62,20 +76,35 @@
         <option v-for="item in gakubuList">{{item}}</option>
       </select>
 
-      <select id="event">
-        <option selected disabled>イベントの種類を選んでください。</option>
-        <option>企業</option>
-        <option>インターン</option>
-        <option>セミナー</option>
+      <select v-model="carrerevent">
+        <option selected disabled value="">イベントの種類を選んでください。</option>
+        <option v-for="item in eventList">{{item}}</option>
       </select>
+
       <div id="career_company">あなたにおすすめの企業</div>
       <div class="recommend" v-for="item of companies">
         <div class="companyName">{{item.companyName}}</div>
         <div class="numberOfInterest">他の希望者：{{item.numberOfInterest}}人</div>
+        <!-- <div class="tri">&nbsp;</div> -->
         <div class="companyInfo">{{item.companyInfo}}</div>
         <div class="companyDate">開催時期：{{item.companyDate}}</div>
         <button class="companyForm">申し込む</button>
       </div>
+      <!-- <div id="career_company">あなたにおすすめの企業</div>
+      <div class="recommend">
+        <div class="companyName">企業名A</div>
+        <div class="numberOfInterest">他の希望者：5人</div>
+        <div class="companyInfo">企業の紹介文</div>
+        <div class="companyDate">開催時期：八月中旬</div>
+        <button class="companyForm">申し込む</button>
+      </div>
+      <div class="recommend">
+        <div class="companyName">企業名B</div>
+        <div class="numberOfInterest">他の希望者：4人</div>
+        <div class="companyInfo">企業の紹介文</div>
+        <div class="companyDate">開催時期：七月</div>
+        <button class="companyForm">申し込む</button>
+      </div> -->
 
     </div>
       

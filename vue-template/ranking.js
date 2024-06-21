@@ -3,15 +3,11 @@
 PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
+  department: "",
   gakubuList: ["大情", "大食", "大日", "大環"],
-  companies: [
-    {
-      companyName: "企業名A",
-      companyInfo: "企業の紹介文",
-      companyDate: "八月中旬",
-      numberOfInterest: 5,
-    },
-  ],
+  carrerevent: "",
+  eventList: ["インターン", "セミナー"],
+  companies: [],
 
   async init() {
     //const username = "作業中はログインしなくてもいいようにした。後で戻す。";
@@ -24,8 +20,11 @@ PetiteVue.createApp({
     }
     this.username = username; /*ユーザーネームの反映*/
 
-    const res = await fetch("data.json"); /*ニュースのデータ取得*/
-    const obj = await res.json(); /*ニュースのデータの読み込み処理*/
-    this.unread = obj.list.length; /*ニュースデータを未読リストに追加*/
+    const res1 = await fetch("data.json"); /*ニュースのデータ取得*/
+    const obj1 = await res1.json(); /*ニュースのデータの読み込み処理*/
+    this.unread = obj1.list.length; /*ニュースデータを未読リストに追加*/
+    const res2 = await fetch("rankingdata.json"); /*ニュースのデータ取得*/
+    const obj2 = await res2.json(); /*ニュースのデータの読み込み処理*/
+    this.companies = obj2.companieslist;
   },
 }).mount();

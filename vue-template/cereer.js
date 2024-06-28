@@ -39,7 +39,7 @@ PetiteVue.createApp({
     const endDayCount = endDate.getDate(); // 月の末日
     const startDay = startDate.getDay(); // 月の最初の日の曜日を取得
     let dayCount = 1; // 日にちのカウント
-    const text = "";
+    const text = "キャリアセミナー";
     const monthNames = [
       "1月",
       "2月",
@@ -91,11 +91,9 @@ PetiteVue.createApp({
         cell.innerHTML += `<div>${text}</div>`;
       }
     }
-    createCalendar(year, month - 1);
+    this.createCalendar(this.year, this.month - 1);
 
-    insertText(year, month, 15, "イベント");
+    this.insertText(this.year, this.month, 15, "イベント");
     console.log(this.text);
   },
-  
-  
 }).mount();

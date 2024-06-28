@@ -98,7 +98,8 @@ main#info {
   margin-bottom: 0.2rem;
 }
 
-.info_btn {
+.info_btn_a,
+.info_btn_b {
   display: inline-block;
   font-weight: bold;
   font-size: 0.75rem;

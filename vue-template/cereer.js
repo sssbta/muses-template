@@ -89,10 +89,9 @@ PetiteVue.createApp({
       if (cell) {
         cell.innerHTML += `<div>${text}</div>`;
       }
-
-      createCalendar(year, month - 1);
-
-      insertText(year, month, 15, "イベント");
     }
+    createCalendar(year, month - 1);
+
+    insertText(year, month, 15, "イベント");
   },
 }).mount();

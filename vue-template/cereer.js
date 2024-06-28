@@ -93,7 +93,7 @@ PetiteVue.createApp({
     this.createCalendar(year, month - 1);
 
     insertText(year, month, 15, "イベント");*/
-    
+
     calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
 
     let html = "<tr>";
@@ -130,6 +130,4 @@ PetiteVue.createApp({
       cell.innerHTML += `<div>${text}</div>`;
     }
   }
-}
-  },
 }).mount();

@@ -71,18 +71,18 @@
       -->
 
       <div id="career_ranking">人気企業ランキング</div>
-      <select v-model="department">
+      <select v-model="department" @change="filterCompanies">
         <option selected disabled value="">学部を選んでください。</option>
         <option v-for="item in gakubuList">{{item}}</option>
       </select>
 
-      <select v-model="carrerevent">
+      <select v-model="carrerevent" @change="filterCompanies">
         <option selected disabled value="">イベントの種類を選んでください。</option>
         <option v-for="item in eventList">{{item}}</option>
       </select>
 
       <div id="career_company">あなたにおすすめの企業</div>
-      <div class="recommend" v-for="item of companies">
+      <div class="recommend" v-for="item of filteredCompanies">
         <div class="companyName">{{item.companyName}}</div>
         <div class="numberOfInterest">他の希望者：{{item.numberOfInterest}}人</div>
         <!-- <div class="tri">&nbsp;</div> -->

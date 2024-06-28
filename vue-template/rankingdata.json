@@ -1,18 +1,94 @@
 {
   "companieslist": [
     {
+      "eventid": "I0001",
       "companyName": "企業名A",
       "companyInfo": "企業の紹介文",
       "companyDate": "八月中旬",
       "eventMode": "インターン",
+      "capacity": 10,
       "numberOfInterest": 5
     },
     {
+      "eventid": "S0001",
       "companyName": "企業名B",
       "companyInfo": "企業の紹介文",
       "companyDate": "七月",
       "eventMode": "セミナー",
+      "capacity": 30,
       "numberOfInterest": 4
+    }
+  ],
+  "applicantslist": [
+    {
+      "eventid": "I0001",
+      "studentNumber": 1111111
+    },
+    {
+      "eventid": "I0001",
+      "studentNumber": 1111112
+    },
+    {
+      "eventid": "I0001",
+      "studentNumber": 1111113
+    },
+    {
+      "eventid": "I0001",
+      "studentNumber": 1111114
+    },
+    {
+      "eventid": "I0001",
+      "studentNumber": 1111115
+    },
+    {
+      "eventid": "S0001",
+      "studentNumber": 2222221
+    },
+    {
+      "eventid": "S0001",
+      "studentNumber": 2222222
+    },
+    {
+      "eventid": "S0001",
+      "studentNumber": 1111113
+    },
+    {
+      "eventid": "S0001",
+      "studentNumber": 1111114
+    },
+    {
+      "eventid": "S0001",
+      "studentNumber": 1111115
+    }
+  ],
+  "studentslist": [
+    {
+      "studentNumber": 1111111,
+      "department": "大情"
+    },
+    {
+      "studentNumber": 1111112,
+      "department": "大情"
+    },
+    {
+      "studentNumber": 1111113,
+      "department": "大情"
+    },
+    {
+      "studentNumber": 1111114,
+      "department": "大情"
+    },
+    {
+      "studentNumber": 1111115,
+      "department": "大情"
+    },
+    {
+      "studentNumber": 2222221,
+      "department": "大食"
+    },
+    {
+      "studentNumber": 2222222,
+      "department": "大食"
     }
   ]
 }

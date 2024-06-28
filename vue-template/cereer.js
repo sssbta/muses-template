@@ -93,7 +93,7 @@ PetiteVue.createApp({
     }
     createCalendar(this.year, this.month - 1);
 
-    this.insertText(this.year, this.month, 15, "イベント");
+    insertText(this.year, this.month, 15, "イベント");
     console.log(this.text);
   },
 }).mount();

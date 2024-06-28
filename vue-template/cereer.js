@@ -86,15 +86,16 @@ PetiteVue.createApp({
       calendarTable.innerHTML += html;
     }
     function insertText(year, month, day, text) {
-      const cell = document.getElementById(`day-${this.year}-${this.month}-${this.day}`);
+      const cell = document.getElementById(`day-${year}-${month}-${day}`);
       if (cell) {
         cell.innerHTML += `<div>${text}</div>`;
       }
+      console.log(cell);
     }
-   
-    createCalendar(this.year, this.month - 1);
 
-    insertText(this.year, this.month, 15, "イベント");
-    console.log(this.text);
+    createCalendar(year, month - 1);
+
+    insertText(year, month, 15, text);
+    console.log(text);
   },
 }).mount();

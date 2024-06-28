@@ -97,5 +97,7 @@ PetiteVue.createApp({
 
     insertText(year, month, 15, text);
     console.log(text);
+
+    
   },
 }).mount();

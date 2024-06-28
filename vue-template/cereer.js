@@ -90,7 +90,7 @@ PetiteVue.createApp({
         cell.innerHTML += `<div>${text}</div>`;
       }
     }
-    this.createCalendar(year, month - 1);
+    createCalendar(year, month - 1);
 
     insertText(year, month, 15, "イベント");
 

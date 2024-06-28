@@ -94,5 +94,5 @@ PetiteVue.createApp({
 
     insertText(year, month, 15, "イベント");
 
-    
+  }
 }).mount();

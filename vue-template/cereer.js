@@ -56,7 +56,7 @@ PetiteVue.createApp({
     ];
     
     function createCalendar(year, month) {
-      calendarHeader.innerText = ${year}年,${monthNames[month]};
+      calendarHeader.innerText = '${year}年${monthNames[month]';
       let html = "<tr>";
 
       // 空白のセルを追加
@@ -86,8 +86,9 @@ PetiteVue.createApp({
 
       calendarTable.innerHTML += html;
     }
+
     function insertText(year, month, day, text) {
-      const cell = document.getElementById(day-${year}-${month}-${day});
+      const cell = document.getElementById('day-${year}-${month}-${day}');
       if (cell) {
         cell.innerHTML += <div>${text}</div>;
       }

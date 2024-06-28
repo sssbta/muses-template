@@ -53,7 +53,7 @@ PetiteVue.createApp({
       "11月",
       "12月",
     ];
-    function createCalendar(year, month) {
+    /*function createCalendar(year, month) {
       calendarHeader.innerText = `${year}年 ${monthNames[month]}`;
       let html = "<tr>";
 
@@ -84,15 +84,50 @@ PetiteVue.createApp({
 
       calendarTable.innerHTML += html;
     }
-    /*function insertText(year, month, day, text) {
+    function insertText(year, month, day, text) {
       const cell = document.getElementById(`day-${year}-${month}-${day}`);
       if (cell) {
         cell.innerHTML += `<div>${text}</div>`;
       }
-    }*/
+    }
+    this.createCalendar(year, month - 1);
 
-    createCalendar(year, month - 1);
+    insertText(year, month, 15, "イベント");*/
 
-    //insertText(year, month, 15, "イベント");
+    calendarHeader.innerText = `${year}年 ${monthNames[month - 1]}`;
+
+    let html = "<tr>";
+
+    for (let i = 0; i < startDay; i++) {
+      html += "<td></td>";
+    }
+
+    for (let i = startDay; i < 7; i++) {
+      html += `<td>${dayCount}</td>`;
+      dayCount++;
+    }
+    html += "</tr>";
+
+    while (dayCount <= endDayCount) {
+      html += "<tr>";
+      for (let i = 0; i < 7; i++) {
+        if (dayCount <= endDayCount) {
+          html += `<td>${dayCount}</td>`;
+          dayCount++;
+        } else {
+          html += "<td></td>";
+        }
+      }
+      html += "</tr>";
+    }
+
+   
+    calendarTable.innerHTML += html;
   },
+  insertText(year, month, day, text) {
+    const cell = document.getElementById(`day-${year}-${month}-${day}`);
+    if (cell) {
+      cell.innerHTML += `<div>${text}</div>`;
+    }
+  }
 }).mount();

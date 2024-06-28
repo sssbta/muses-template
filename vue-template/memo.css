@@ -94,11 +94,17 @@ main#info {
 }
 
 #control {
+  text-align: right;
   margin-left: 1rem;
   margin-bottom: 0.2rem;
 }
 
-.info_btn {
+#regi {
+  text-align: right;
+}
+
+.info_btn_a,
+.info_btn_b {
   display: inline-block;
   font-weight: bold;
   font-size: 0.75rem;

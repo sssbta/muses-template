@@ -4,9 +4,9 @@ PetiteVue.createApp({
   username: "" /*ユーザーネーム*/,
   unread: "" /*未読ニュース*/,
   data: [],
-  name: "",
-  url: "",
-  text: "",
+  displayedData: [],
+  isShowingFavorites: false,
+  buttonText: "お気に入りのみ表示",
 
   async init() {
     const username =
@@ -18,10 +18,25 @@ PetiteVue.createApp({
     }
     this.username = username; /*ユーザーネームの反映*/
 
+    const news = await fetch("data.json"); /*ニュースのデータ取得*/
+    const objc = await news.json(); /*ニュースのデータの読み込み処理*/
+    this.unread = objc.list.length; /*ニュースデータを未読リストに追加*/
+
     const res = await fetch("memodata.json");
     const obj = await res.json();
     this.data = obj.list;
-    console.log(this.data);
-    this.unread = this.data.length;
+    this.displayedData = this.data;
+    s;
+  },
+
+  toggleFavorite() {
+    this.isShowingFavorites = !this.isShowingFavorites;
+    if (this.isShowingFavorites) {
+      this.displayedData = this.data.filter((item) => item.favo == "★");
+      this.buttonText = "お気に入り以外も表示";
+    } else {
+      this.displayedData = this.data;
+      this.buttonText = "お気に入りのみ表示";
+    }
   },
 }).mount();

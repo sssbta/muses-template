@@ -63,12 +63,14 @@
             maxlength="500"
           ></textarea></label
         ><br />
-        <button>お気に入り</button>
-        <button>登録する</button>
+        <div id="regi">
+          <button>お気に入り</button>
+          <button>登録する</button>
+        </div>
       </div>
 
-      <div id="info_list" v-if="data">
-        <div class="record" v-for="item of data">
+      <div id="info_list" v-if="displayedData.length">
+        <div class="record" v-for="item in displayedData">
           <div class="date">記入日：{{item.date}}</div>
           <div class="name">企業名：{{item.name}}</div>
           <div class="favo">{{item.favo}}</div>
@@ -78,8 +80,8 @@
         </div>
       </div>
       <div id="control">
-        <div class="info_btn">お気に入りのみ表示</div>
-        <div class="info_btn">メモ検索</div>
+        <div class="info_btn_a" @click="toggleFavorite">{{ buttonText }}</div>
+        <div class="info_btn_b">メモ検索</div>
       </div>
 
       <div id="info_footer">　企業メモ</div>

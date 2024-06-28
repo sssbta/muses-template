@@ -94,6 +94,7 @@ main#info {
 }
 
 #control {
+  text-align: right;
   margin-left: 1rem;
   margin-bottom: 0.2rem;
 }

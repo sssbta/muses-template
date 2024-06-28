@@ -66,7 +66,7 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        html += `<td>${dayCount}</td>`;
+        html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
         dayCount++;
       }
       html += "</tr>";
@@ -75,7 +75,7 @@ PetiteVue.createApp({
         html += "<tr>";
         for (let i = 0; i < 7; i++) {
           if (dayCount <= endDayCount) {
-            html += `<td>${dayCount}</td>`;
+            html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
             dayCount++;
           } else {
             html += "<td></td>";

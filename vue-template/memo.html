@@ -55,7 +55,8 @@
       <div id="info_header">　企業メモ</div>
       <div id="form">
         <label>企業名：<input v-model="name" /></label><br />
-        <label>記入日：<input type="date" name="writeing" /></label><br />
+        <label>記入日：<input type="date" name="writeing" /></label>
+        <label><input type="checkbox" /> お気に入り</label>
         <label
           >メモ　：<textarea
             cols="35"
@@ -63,8 +64,7 @@
             maxlength="500"
           ></textarea></label
         ><br />
-        <div id="regi">
-          <button>お気に入り</button>
+        <div id="ok">
           <button>登録する</button>
         </div>
       </div>

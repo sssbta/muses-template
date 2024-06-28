@@ -99,10 +99,6 @@ main#info {
   margin-bottom: 0.2rem;
 }
 
-#regi {
-  text-align: right;
-}
-
 .info_btn_a,
 .info_btn_b {
   display: inline-block;
@@ -119,6 +115,10 @@ main#info {
   border-radius: 50%;
   color: #33485e;
   margin-left: 0.5rem;
+}
+
+#ok {
+  text-align: right;
 }
 
 button {

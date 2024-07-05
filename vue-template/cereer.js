@@ -75,10 +75,10 @@ PetiteVue.createApp({
         html += "<tr>";
         for (let i = 0; i < 7; i++) {
           if (dayCount <= endDayCount) {
-            html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}キャリア</td>`;
+            html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
             dayCount++;
           } else {
-            html += "<td></td>";
+            html += "<td>あ</td>";
           }
           // console.log(dayCount);
         }

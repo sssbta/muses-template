@@ -80,14 +80,14 @@ PetiteVue.createApp({
           } else {
             html += "<td></td>";
           }
-          console.log(dayCount);
+          // console.log(dayCount);
         }
         html += "</tr>";
       }
 
       calendarTable.innerHTML += html;
     }
-
+    console.log(dayCount);
     function insertText(year, month, day, text) {
       const cell = document.getElementById(`day-${year}-${month}-${day}`);
       if (cell) {

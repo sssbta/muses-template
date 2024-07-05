@@ -15,16 +15,6 @@ main#info {
   margin: 0.5rem 0 1rem;
 }
 
-.exmark {
-  display: inline-block;
-  text-align: center;
-  background-color: #cc0a0b;
-  border-radius: 50%;
-  color: #ffffef;
-  font-size: 0.64rem;
-  width: 1rem;
-}
-
 #unread_num .exmark {
   vertical-align: top;
 }
@@ -80,11 +70,6 @@ main#info {
   background-color: #8c8a8c;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   justify-self: right;
-}
-
-.mark {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
 }
 
 .text {

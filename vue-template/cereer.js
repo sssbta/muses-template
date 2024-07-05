@@ -80,7 +80,7 @@ PetiteVue.createApp({
           } else {
             html += "<td></td>";
           }
-          console.log(this.dayCount);
+          console.log(dayCount);
         }
         html += "</tr>";
       }

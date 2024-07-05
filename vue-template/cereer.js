@@ -87,7 +87,7 @@ PetiteVue.createApp({
             if (dayCount === 13) {
               html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}<br>イベント</td>`;
             } else {
-              html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
+              html += `<td id="day-${year}-${month}-${dayCount}" v-on:click="hukidasi2">${dayCount}</td>`;
             }
             dayCount++;
 
@@ -125,6 +125,9 @@ PetiteVue.createApp({
   },
   hukidasi(){
     window.alert("16:00 オンラインセミナー")
+  },
+  hukidasi2(){
+    window.alert("16:00 オンラインセミナー  18:00  ○○株式会社ES締切")
   }
   
 }).mount();

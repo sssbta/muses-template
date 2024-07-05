@@ -95,8 +95,17 @@ PetiteVue.createApp({
       console.log(cell);
     }
     createCalendar(year, month - 1);
-    
+
     insertText(year, month, 15, "イベント");
-    console.log(this.text);
+    console.log(this.dayCount);
+    const todayId = `day-${year}-${month}-${today.getDate()}`;
+    const todayCell = document.getElementById(todayId);
+
+    if (todayCell) {
+      console.log(`Today's cell id: ${todayId}`);
+      console.log(todayCell);
+    } else {
+      console.log(`No cell found with id: ${todayId}`);
+    }
   },
 }).mount();

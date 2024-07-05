@@ -24,7 +24,14 @@ PetiteVue.createApp({
 
     const res = await fetch("memodata.json");
     const obj = await res.json();
-    this.data = obj.list;
+    this.data = obj.list.map((item) => {
+      if (item.text.length > 16) {
+        item.shortText = item.text.substring(0, 16) + "……";
+      } else {
+        item.shortText = item.text;
+      }
+      return item;
+    });
     this.displayedData = this.data;
   },
 

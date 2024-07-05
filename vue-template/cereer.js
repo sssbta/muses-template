@@ -86,7 +86,7 @@ PetiteVue.createApp({
           }else */if(dayCount <= endDayCount){
             html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
             dayCount++;
-          } else if(dayCount >= endDayCount) {
+          } else /*if(dayCount >= endDayCount) */{
             html += "<td></td>";
           }
           // console.log(dayCount);

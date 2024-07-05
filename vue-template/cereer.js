@@ -97,7 +97,7 @@ PetiteVue.createApp({
     createCalendar(year, month - 1);
 
     insertText(year, month, 15, "イベント");
-    console.log(this.text);
+    console.log(this.dayCount);
     const todayId = `day-${year}-${month}-${today.getDate()}`;
     const todayCell = document.getElementById(todayId);
 

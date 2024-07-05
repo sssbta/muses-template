@@ -66,7 +66,7 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        html += `<td>${dayCount}</td>`;
+        html += `<td>${dayCount}ibento</td>`;
         dayCount++;
       }
       html += "</tr>";
@@ -78,7 +78,7 @@ PetiteVue.createApp({
             html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
             dayCount++;
           } else {
-            html += "<td>あ</td>";
+            html += "<td></td>";
           }
           // console.log(dayCount);
         }

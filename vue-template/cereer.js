@@ -88,6 +88,7 @@ PetiteVue.createApp({
             if (dayCount == 13) {
               html += `<td >${dayCount}<br>イベント</td>`;
             }
+            
           } /*if(dayCount >= endDayCount) */ else {
             html += "<td></td>";
           }

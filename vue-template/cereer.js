@@ -87,7 +87,7 @@ PetiteVue.createApp({
 
       calendarTable.innerHTML += html;
     }
-    console.log(dayCount, day);
+    console.log(dayCount);
     function insertText(year, month, dayCount, text) {
       const cell = document.getElementById(`day-${year}-${month}-${dayCount}`);
       if (cell) {

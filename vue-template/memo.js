@@ -26,7 +26,6 @@ PetiteVue.createApp({
     const obj = await res.json();
     this.data = obj.list;
     this.displayedData = this.data;
-    s;
   },
 
   toggleFavorite() {

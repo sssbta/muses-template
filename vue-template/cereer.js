@@ -84,11 +84,10 @@ PetiteVue.createApp({
             dayCount++;
           }else */ if (dayCount <= endDayCount) {
             html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
-
-            if (dayCount == 13) {
-              html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}<br>イベント</td>`;
-            }
             dayCount++;
+            if (dayCount == 13) {
+              html += `<td >${dayCount}<br>イベント</td>`;
+            }
           } /*if(dayCount >= endDayCount) */ else {
             html += "<td></td>";
           }

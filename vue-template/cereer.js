@@ -91,7 +91,7 @@ PetiteVue.createApp({
     function insertText(year, month, dayCount, text) {
       const cell = document.getElementById(`day-${year}-${month}-${dayCount}`);
       if (cell) {
-        cell.innerHTML += `<div>${text}</div>`;
+        cell.innerHTML += `<div>${this.text}</div>`;
       }
       console.log(cell);
     }

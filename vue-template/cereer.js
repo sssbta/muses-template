@@ -87,9 +87,9 @@ PetiteVue.createApp({
 
       calendarTable.innerHTML += html;
     }
-    console.log(dayCount,day);
-    function insertText(year, month, day, text) {
-      const cell = document.getElementById(`day-${year}-${month}-${day}`);
+    console.log(dayCount, day);
+    function insertText(year, month, dayCount, text) {
+      const cell = document.getElementById(`day-${year}-${month}-${dayCount}`);
       if (cell) {
         cell.innerHTML += `<div>${text}</div>`;
       }
@@ -97,7 +97,7 @@ PetiteVue.createApp({
     }
     createCalendar(year, month - 1);
 
-    insertText(year, month, 15, "イベント");
+    insertText(year, month, 1, "イベント");
     console.log(this.dayCount);
     const todayId = `day-${year}-${month}-${today.getDate()}`;
     const todayCell = document.getElementById(todayId);

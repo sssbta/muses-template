@@ -7,7 +7,7 @@
       "companyDate": "八月中旬",
       "eventMode": "インターン",
       "capacity": 10,
-      "numberOfInterest": 5
+      "numberOfInterest": 97
     },
     {
       "eventid": "S0001",
@@ -16,7 +16,16 @@
       "companyDate": "七月",
       "eventMode": "セミナー",
       "capacity": 30,
-      "numberOfInterest": 4
+      "numberOfInterest": 98
+    },
+    {
+      "eventid": "I0002",
+      "companyName": "企業名C",
+      "companyInfo": "企業の紹介文",
+      "companyDate": "8/23,8/24,8/25",
+      "eventMode": "インターン",
+      "capacity": 5,
+      "numberOfInterest": 99
     }
   ],
   "applicantslist": [

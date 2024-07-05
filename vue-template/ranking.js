@@ -11,16 +11,17 @@ PetiteVue.createApp({
   applicants: [],
   students: [],
   filteredCompanies: [],
+  isShow: false,
 
   async init() {
     //const username = "作業中はログインしなくてもいいようにした。後で戻す。";
     const username =
       sessionStorage.username; /*セッションごとのユーザーネームを設定*/
-    // if (!username) {
-    //   /*ユーザーネームが入力されていない場合*/
-    //   window.alert("ログインしてください"); /*アラートで警告*/
-    //   location.href = "login.html"; /*ログインページを表示する*/
-    // }
+    if (!username) {
+      /*ユーザーネームが入力されていない場合*/
+      window.alert("ログインしてください"); /*アラートで警告*/
+      location.href = "login.html"; /*ログインページを表示する*/
+    }
     this.username = username; /*ユーザーネームの反映*/
 
     const res1 = await fetch("data.json"); /*ニュースのデータ取得*/
@@ -29,9 +30,8 @@ PetiteVue.createApp({
     const res2 = await fetch("rankingdata.json"); /*ニュースのデータ取得*/
     const obj2 = await res2.json(); /*ニュースのデータの読み込み処理*/
     this.companies = obj2.companieslist;
-    this.applicants = data.applicantslist;
-    this.students = data.studentslist;
-    this.filteredCompanies = this.companies;
+    this.applicants = obj2.applicantslist;
+    this.students = obj2.studentslist;
   },
 
   filterCompanies() {
@@ -40,19 +40,18 @@ PetiteVue.createApp({
         .filter((student) => student.department === this.department)
         .map((student) => student.studentNumber);
 
-      const eventIds = this.applicants
-        .filter((applicant) => studentNumbers.includes(applicant.studentNumber))
-        .map((applicant) => applicant.eventid);
+      const eventIds = this.companies
+        .filter((company) => company.eventMode === this.carrerevent)
+        .map((company) => company.eventid);
 
       this.filteredCompanies = this.companies
-        .filter(
-          (company) =>
-            eventIds.includes(company.eventid) &&
-            company.eventMode === this.carrerevent
-        )
-        .sort((a, b) => b.numberOfInterest - a.numberOfInterest);
-    } else {
-      this.filteredCompanies = this.companies;
+        .filter((company) => eventIds.includes(company.eventid))
+        .sort((company) => company.numberOfInterest);
+      this.isShow = true;
+    } else if (this.department) {
+      console.log("草");
+    } else if (this.carrerevent) {
+      console.log("www");
     }
   },
 }).mount();

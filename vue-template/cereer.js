@@ -66,36 +66,65 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        html += `<td>${dayCount}</td>`;
-        dayCount++;
+        if (dayCount == 1) {
+          html += `<td v-on:click="hukidasi">${dayCount}<br>イベント</td>`;
+          dayCount++;
+        } else {
+          html += `<td>${dayCount}</td>`;
+          dayCount++;
+        }
       }
       html += "</tr>";
 
       while (dayCount <= endDayCount) {
         html += "<tr>";
         for (let i = 0; i < 7; i++) {
-          if (dayCount <= endDayCount) {
-            html += `<td>${dayCount}</td>`;
+          /*if (dayCount <= endDayCount & dayCount==7) {
+            html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}<br> イベント</td>`;
             dayCount++;
-          } else {
+          }else */ if (dayCount <= endDayCount) {
+            if (dayCount === 13) {
+              html += `<td id="day-${year}-${month}-${dayCount}" v-on:click="hukidasi2">${dayCount}<br>イベント</td>`;
+            } else {
+              html += `<td id="day-${year}-${month}-${dayCount}" >${dayCount}</td>`;
+            }
+            dayCount++;
+          } /*if(dayCount >= endDayCount) */ else {
             html += "<td></td>";
           }
+          // console.log(dayCount);
         }
         html += "</tr>";
       }
 
       calendarTable.innerHTML += html;
     }
-
-    function insertText(year, month, day, text) {
-      const cell = document.getElementById(`day-${year}-${month}-${day}`);
+    console.log(dayCount);
+    function insertText(year, month, dayCount, text) {
+      const cell = document.getElementById(`day-${year}-${month}-${dayCount}`);
       if (cell) {
-        cell.innerHTML += `<div>${text}</div>`;
+        cell.innerHTML += `<div>${this.text}</div>`;
       }
+      console.log(cell);
     }
     createCalendar(year, month - 1);
 
-    insertText(year, month, 15, "イベント");
-    console.log(this.text);
+    insertText(year, month, 1, "イベント");
+    console.log(this.dayCount);
+    const todayId = `day-${year}-${month}-${today.getDate()}`;
+    const todayCell = document.getElementById(todayId);
+
+    if (todayCell) {
+      console.log(`Today's cell id: ${todayId}`);
+      console.log(todayCell);
+    } else {
+      console.log(`No cell found with id: ${todayId}`);
+    }
+  },
+  hukidasi() {
+    window.alert("16:00 オンラインセミナー");
+  },
+  hukidasi2() {
+    window.alert("16:00 オンラインセミナー    18:00  ○○株式会社ES締切");
   },
 }).mount();

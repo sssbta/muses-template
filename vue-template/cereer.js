@@ -66,14 +66,13 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        if(dayCount==1){
+        if (dayCount == 1) {
           html += `<td v-on:click="hukidasi">${dayCount}<br>イベント</td>`;
           dayCount++;
-        }else{
+        } else {
           html += `<td>${dayCount}</td>`;
           dayCount++;
         }
-        
       }
       html += "</tr>";
 
@@ -83,13 +82,14 @@ PetiteVue.createApp({
           /*if (dayCount <= endDayCount & dayCount==7) {
             html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}<br> イベント</td>`;
             dayCount++;
-          }else */if(dayCount <= endDayCount){
+          }else */ if (dayCount <= endDayCount) {
             html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}</td>`;
-            dayCount++;
-            if(dayCount==13){
+
+            if (dayCount == 13) {
               html += `<td id="day-${year}-${month}-${dayCount}">${dayCount}<br>イベント</td>`;
             }
-          } else /*if(dayCount >= endDayCount) */{
+            dayCount++;
+          } /*if(dayCount >= endDayCount) */ else {
             html += "<td></td>";
           }
           // console.log(dayCount);
@@ -121,9 +121,7 @@ PetiteVue.createApp({
       console.log(`No cell found with id: ${todayId}`);
     }
   },
-  hukidasi(){
-    window.alert("16:00 オンラインセミナー")
-  }
-  
+  hukidasi() {
+    window.alert("16:00 オンラインセミナー");
+  },
 }).mount();
-

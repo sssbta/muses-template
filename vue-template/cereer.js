@@ -67,7 +67,7 @@ PetiteVue.createApp({
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
         if(dayCount==1){
-          html += `<td>${dayCount}<br>イベント</td>`;
+          html += `<td v-on:click="hukidasi">${dayCount}<br>イベント</td>`;
           dayCount++;
         }else{
           html += `<td>${dayCount}</td>`;
@@ -118,17 +118,9 @@ PetiteVue.createApp({
       console.log(`No cell found with id: ${todayId}`);
     }
   },
+  hukidasi(){
+    window.alert("16:00 オンラインセミナー")
+  }
   
 }).mount();
-const target = document.getElementById("day-2024-07-01");
-const popup = document.getElementById("hukidasi");
 
-// ボタンにhoverした時
-target.addEventListener('mouseover', () => {
-  popup.style.display = 'block';
-}, false);
-
-// ボタンから離れた時
-target.addEventListener('mouseleave', () => {
-  popup.style.display = 'none';
-}, false);

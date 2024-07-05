@@ -66,8 +66,14 @@ PetiteVue.createApp({
 
       // 日にちを追加
       for (let i = startDay; i < 7; i++) {
-        html += `<td>${dayCount}</td>`;
-        dayCount++;
+        if(dayCount==1){
+          html += `<td>${dayCount}<br>イベント</td>`;
+          dayCount++;
+        }else{
+          html += `<td>${dayCount}</td>`;
+          dayCount++;
+        }
+        
       }
       html += "</tr>";
 

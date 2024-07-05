@@ -125,6 +125,6 @@ PetiteVue.createApp({
     window.alert("16:00 オンラインセミナー");
   },
   hukidasi2() {
-    window.alert("$16:00 オンラインセミナー 18:00  ○○株式会社ES締切");
+    window.alert("16:00 オンラインセミナー    18:00  ○○株式会社ES締切");
   },
 }).mount();

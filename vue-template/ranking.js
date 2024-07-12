@@ -44,6 +44,17 @@ PetiteVue.createApp({
         .filter((company) => company.eventMode === this.carrerevent)
         .map((company) => company.eventid);
 
+      const interested = this.applicants
+        .filter((applicant) => eventIds.includes(applicant.eventid))
+        .filter((applicant) =>
+          studentNumbers.includes(applicant.studentNumber)
+        );
+      // カウントの辞書を作成
+      const countMap = {};
+      interested.forEach((company) => {
+        countMap[company.eventid] = (countMap[company.eventid] || 0) + 1;
+      });
+
       this.filteredCompanies = this.companies
         .filter((company) => eventIds.includes(company.eventid))
         .sort((company) => company.numberOfInterest);

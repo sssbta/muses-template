@@ -7,7 +7,7 @@
       "companyDate": "八月中旬",
       "eventMode": "インターン",
       "capacity": 10,
-      "numberOfInterest": 97
+      "numberOfInterest": 5
     },
     {
       "eventid": "S0001",
@@ -16,7 +16,7 @@
       "companyDate": "七月",
       "eventMode": "セミナー",
       "capacity": 30,
-      "numberOfInterest": 98
+      "numberOfInterest": 4
     },
     {
       "eventid": "I0002",
@@ -25,7 +25,7 @@
       "companyDate": "8/23,8/24,8/25",
       "eventMode": "インターン",
       "capacity": 5,
-      "numberOfInterest": 99
+      "numberOfInterest": 3
     }
   ],
   "applicantslist": [
@@ -48,6 +48,22 @@
     {
       "eventid": "I0001",
       "studentNumber": 1111115
+    },
+    {
+      "eventid": "I0002",
+      "studentNumber": 1111111
+    },
+    {
+      "eventid": "I0002",
+      "studentNumber": 1111113
+    },
+    {
+      "eventid": "I0002",
+      "studentNumber": 2222221
+    },
+    {
+      "eventid": "I0002",
+      "studentNumber": 2222222
     },
     {
       "eventid": "S0001",

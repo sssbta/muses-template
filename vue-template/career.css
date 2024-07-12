@@ -41,12 +41,7 @@ main#career {
 }
 
 /*リンクの色・アンダーラインが出ないようにする*/
-#career_ranking a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#career_memo a {
+a {
   color: inherit;
   text-decoration: none;
 }

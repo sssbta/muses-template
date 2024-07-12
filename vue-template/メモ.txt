@@ -20,5 +20,7 @@
 
   スライド：https://docs.google.com/presentation/d/1fFzh2kFSmARsHcSkHuBTZ2ffaIfHlccKP64LMPJUNCk/edit?usp=sharing
 
+　GitHubリポジトリ：https://github.com/sssbta/muses-template/tree/main/vue-template
+
   GitHubのアプリ：https://sssbta.github.io/muses-template/vue-template
   

@@ -45,4 +45,14 @@ PetiteVue.createApp({
       this.buttonText = "お気に入りのみ表示";
     }
   },
+
+  showItemDetails(item) {
+    const { shortText, ...details } = {
+      企業名: item.name,
+      記入日: item.date,
+      お気に入り: item.favo,
+      メモ内容: item.text,
+    };
+    alert(JSON.stringify(details, null, 2));
+  },
 }).mount();

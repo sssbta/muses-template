@@ -20,5 +20,5 @@
 
   スライド：https://docs.google.com/presentation/d/1fFzh2kFSmARsHcSkHuBTZ2ffaIfHlccKP64LMPJUNCk/edit?usp=sharing
 
-  GitHub：https://sssbta.github.io/muses-template/vue-template
+  GitHubのアプリ：https://sssbta.github.io/muses-template/vue-template
   

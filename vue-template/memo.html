@@ -70,7 +70,11 @@
       </div>
 
       <div id="info_list" v-if="displayedData.length">
-        <div class="record" v-for="item in displayedData">
+        <div
+          class="record"
+          v-for="item in displayedData"
+          @click="showItemDetails(item)"
+        >
           <div class="date">記入日：{{item.date}}</div>
           <div class="name">企業名：{{item.name}}</div>
           <div class="favo">{{item.favo}}</div>

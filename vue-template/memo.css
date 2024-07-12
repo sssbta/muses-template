@@ -85,6 +85,10 @@ main#info {
   margin-bottom: 0.2rem;
 }
 
+.record {
+  cursor: pointer;
+}
+
 .info_btn_a,
 .info_btn_b {
   display: inline-block;

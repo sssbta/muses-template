@@ -136,15 +136,19 @@ PetiteVue.createApp({
         countMap[company.eventid] = (countMap[company.eventid] || 0) + 1;
       });
 
-      this.filteredCompanies = this.companies
-        .filter((company) => eventIds.includes(company.eventid))
-        .sort((company) => company.numberOfInterest);
+      this.filteredCompanies = this.companies.filter((company) =>
+        eventIds.includes(company.eventid)
+      );
+
       this.filteredCompanies.forEach((company) => {
         company.numberOfInterest = countMap[company.eventid];
         if (company.numberOfInterest == undefined) {
           company.numberOfInterest = 0;
         }
       });
+      this.filteredCompanies.sort(
+        (a, b) => b.numberOfInterest - a.numberOfInterest
+      );
       this.isShow = true;
     }
   },
